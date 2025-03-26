@@ -44,9 +44,8 @@ nav{
     color:rgba(240, 255, 255, 1);
     background-color:rgba(250, 116, 54, 1);
     border-radius: 5px;
-    border-width: 0;
     font-family: 'poppins',sans-serif;
-    padding: 8px 4px;
+    padding: 1rem 3rem;
 }
 .section1{
     display: flex;
@@ -56,7 +55,7 @@ nav{
 .section1-link{
     display:flex;
     flex-direction:row;
-    margin-left:2rem;
+    margin-left:140px;
 }
 .link2{
     margin: 50px 90px;
@@ -69,7 +68,7 @@ nav{
 .para1{
     font-family: 'poppins',sans-serif;
     font-size: 15px;
-    line-height:27px;
+    line-height:40px;
     text-align: left;
     
 }
@@ -88,16 +87,16 @@ nav{
 color:rgba(250, 116, 54, 1);
 border:1px solid rgba(250, 116, 54, 1);
 text-decoration: none;
-padding: 10px 10px;
+padding: 1rem 2rem;
 background-color: rgba(255, 255, 255, 1);
 margin-top: 20px;
-border-radius: 5px;
+border-radius: 0rem;
 font-family: 'poppins',sans-serif;
 font-size: 18px;
 }
 .explore{
     width: -10px;
-    height: 25vh;
+    height: 30vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -112,7 +111,7 @@ border-radius: 10px;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .sub-content{
-    display:frlex;
+    display:flex;
     justify-content: space-around;
 }
 .list1{
@@ -142,9 +141,10 @@ font-size: 18px;
 color: white;
 background-color: rgba(250, 116, 54, 1);
 text-decoration:none;
-padding: 0.5rem;
+padding: 1rem;
 border-radius: 5px;
-border-width: 0;
+margin-top: 2px;
+cursor: pointer;
 }
 .section2{
     background-color: rgba(247, 248, 252, 1);
@@ -184,7 +184,7 @@ border-width: 0;
   }
 .space{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 30px 200px 0px 200px;
       gap: 20px;
 }
@@ -206,11 +206,11 @@ border-width: 0;
     font-size: 15px;
 }
 .inline{
-    margin-bottom:20px;
+    margin-bottom:27px;
 }
 .inline img{
-    width: 25px;
-    height:25px;
+    width: 30px;
+    height:30px;
 }
 .deals{
     background-color:rgba(254, 252, 251, 1);
@@ -218,16 +218,16 @@ border-width: 0;
     padding:20px;
     margin-bottom: 30px;
 }
-.exclusive{
+.exclusive1{
     text-align: center;
 }
-.product h1{
+.exclusive1 h1{
     font-family: 'volkhov',sans-serif;
     font-size: 30px;
 }
-.product p{
+.exclusive1 p{
     font-family: "poppins",sans-serif;
-    font-size: 18px;
+    font-size: 12px;
     margin-bottom: 30px;
 }
 .places{
@@ -251,7 +251,7 @@ border-width: 0;
 .place-ratings{
     display: flex;
     justify-content:space-between;
-    margin: 10px 15px;
+    margin: 10px 10px;
       font-family: "Poppins", sans-serif;
       font-weight: bold;
 }
@@ -302,7 +302,7 @@ border-width: 0;
     align-items: center;
     margin-top: 65px;
     margin-left: 100px;
-    gap:4rem;
+    gap:30px;
 }
 .content h1{
     text-align: center;
@@ -360,7 +360,7 @@ border-width: 0;
   }
   .days{
     display: flex;
-    gap: 100px;
+    gap: 8rem;
   }
   .sub-days {
     display: flex;
@@ -374,11 +374,11 @@ border-width: 0;
   .trip-days{
     font-family: 'poppins',sans-serif;
     color: rgba(102, 102, 102, 1);
-    font-size: 15px;
+    font-size: 10px;
   }
   .rating{
-    width:15px;
-    height: 15px;
+    width:12px;
+    height: 12px;
   }
   .review{
     background-color: rgba(247, 248, 252, 1);
@@ -392,7 +392,7 @@ border-width: 0;
     align-items: center;
   }
   .people{
-    margin-right: 90px;
+    margin-right: 100px;
     margin-top: 30px;
     text-align: left;
   }
@@ -410,8 +410,8 @@ border-width: 0;
   .client-review{
     background-color: rgba(255, 255, 255, 1);
       margin-left: 20px;
-      max-width: 400px;
-      margin-top: 15px;
+      max-width: 320px;
+      margin-top: 20px;
       border-radius: 15px;
 
   }
@@ -433,7 +433,7 @@ border-width: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
     flex-wrap: wrap;
   }
   .sub-define{
@@ -447,7 +447,7 @@ border-width: 0;
     width: 100%;
   }
   .definition{
-    margin: 12px 12px 12px 12px;
+    margin: 10px 10px 10px 10px;
   }
   .definition p {
     font-family: "Poppins", sans-serif;
@@ -466,7 +466,7 @@ border-width: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 30px;
   }
   .exclusive {
     max-width: 900px;
