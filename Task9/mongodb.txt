@@ -1,0 +1,467 @@
+-- create a MongoDB database
+
+use Zenclass
+switched to db Zenclass
+
+--create collections users
+db.createCollection("users");
+
+--insert sample document into the collections users
+
+db.users.insertMany([ 
+    { name: "Maheswari", mentor_id: 1 }, 
+    { name: "Priya", mentor_id: 2 }, 
+    { name: "Ragavi", mentor_id: 3 }, 
+    { name: "Sahana", mentor_id: 4 }] );
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('680d0581045ac2583bb5f899'),
+    '1': ObjectId('680d0581045ac2583bb5f89a'),
+    '2': ObjectId('680d0581045ac2583bb5f89b'),
+    '3': ObjectId('680d0581045ac2583bb5f89c')
+  }
+}
+Zenclass> db.users.find();
+[  
+  {
+    _id: ObjectId('680d0581045ac2583bb5f899'),
+    name: 'Maheswari',
+    mentor_id: 1
+  },
+  {
+    _id: ObjectId('680d0581045ac2583bb5f89a'),
+    name: 'Priya',
+    mentor_id: 2
+  },
+  {
+    _id: ObjectId('680d0581045ac2583bb5f89b'),
+    name: 'Ragavi',
+    mentor_id: 3
+  },
+  {
+    _id: ObjectId('680d0581045ac2583bb5f89c'),
+    name: 'Sahana',
+    mentor_id: 4
+  }
+]
+
+----create collections codekatta
+db.createCollection("codekatta");
+
+--Insertting sample documents in the codekatta collections
+db.codekatta.insertMany([ {name:"Maheswari",problems_solved:100}, 
+    {name:"Priya",problems_solved:150},   
+... {name:"Ragavi",Problems_solved:180},
+... {name:"Sahana",Problems_solved:120}
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('680d07d4045ac2583bb5f89d'),
+    '1': ObjectId('680d07d4045ac2583bb5f89e'),
+    '2': ObjectId('680d07d4045ac2583bb5f89f'),
+    '3': ObjectId('680d07d4045ac2583bb5f8a0')
+  }
+}
+Zenclass> db.codekatta.find();
+[  
+  {
+    _id: ObjectId('680d07d4045ac2583bb5f89d'),
+    name: 'Maheswari',
+    problems_solved: 100
+  },
+  {
+    _id: ObjectId('680d07d4045ac2583bb5f89e'),
+    name: 'Priya',
+    problems_solved: 150
+  },
+  {
+    _id: ObjectId('680d07d4045ac2583bb5f89f'),
+    name: 'Ragavi',
+    Problems_solved: 180
+  },
+  {
+    _id: ObjectId('680d07d4045ac2583bb5f8a0'),
+    name: 'Sahana',
+    Problems_solved: 120
+  }
+]
+
+--create a collection for attendance
+
+db.createCollection("attendance");
+
+--Insert sample document in to the collection attendance
+
+db.attendance.insertMany([ {name:"Maheswari",attendance:"absent",date:ISODate("2020-10-16")}, {name:"Priya",attendace:"Present",date:ISODate("2020-10-20")},
+... {name:"Ragavi",attendance:"absent",date:ISODate("2020-10-19")},
+... {name:"Sahana",attandance:"present",date:ISODate("2020-11-01")}
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('680d0b40045ac2583bb5f8a1'),
+    '1': ObjectId('680d0b40045ac2583bb5f8a2'),
+    '2': ObjectId('680d0b40045ac2583bb5f8a3'),
+    '3': ObjectId('680d0b40045ac2583bb5f8a4')
+  }
+}
+Zenclass> db.attendance.find();
+[  
+  {
+    _id: ObjectId('680d0b40045ac2583bb5f8a1'),
+    name: 'Maheswari',
+    attendance: 'absent',
+    date: ISODate('2020-10-16T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('680d0b40045ac2583bb5f8a2'),
+    name: 'Priya',
+    attendace: 'Present',
+    date: ISODate('2020-10-20T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('680d0b40045ac2583bb5f8a3'),
+    name: 'Ragavi',
+    attendance: 'absent',
+    date: ISODate('2020-10-19T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('680d0b40045ac2583bb5f8a4'),
+    name: 'Sahana',
+    attandance: 'present',
+    date: ISODate('2020-11-01T00:00:00.000Z')
+  }
+]
+
+--create collection Topics
+
+db.createCollection("topics");
+
+--Insert the document in to  the collection Topics
+
+
+db.topics.insertMany([
+... {topic:"javascript_Day1",month:"october",date:ISODate("2020-10-10")},
+... {topic:"javascript_Day2",month:"october",date:ISODate("2020-10-18")},
+... {topic:"javascript_Day3",month:"october",date:ISODate("2020-10-20")},
+... {topic:"javascript_Day4",month:"november",date:ISODate("2020-11-11")}
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('680d0e3d045ac2583bb5f8a5'),
+    '1': ObjectId('680d0e3d045ac2583bb5f8a6'),
+    '2': ObjectId('680d0e3d045ac2583bb5f8a7'),
+    '3': ObjectId('680d0e3d045ac2583bb5f8a8')
+  }
+}
+Zenclass> db.topics.find();
+[  
+  {
+    _id: ObjectId('680d0e3d045ac2583bb5f8a5'),
+    topic: 'javascript_Day1',
+    month: 'october',
+    date: ISODate('2020-10-10T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('680d0e3d045ac2583bb5f8a6'),
+    topic: 'javascript_Day2',
+    month: 'october',
+    date: ISODate('2020-10-18T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('680d0e3d045ac2583bb5f8a7'),
+    topic: 'javascript_Day3',
+    month: 'october',
+    date: ISODate('2020-10-20T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('680d0e3d045ac2583bb5f8a8'),
+    topic: 'javascript_Day4',
+    month: 'november',
+    date: ISODate('2020-11-11T00:00:00.000Z')
+  }
+]
+
+--create collections tasks
+
+db.createCollection("tasks");
+
+--Insert sample documents in to the collection tasks
+
+db.tasks.insertMany([
+... {task:"function",date:ISODate("2020-10-10"),submitted:true},
+... {task:"forloop",date:ISODate("2020-10-18"),submitted:false},
+... {task:"oops",date:ISODate("2020-10-20"),submitted:false},
+... {task:"blog about HTML",date:ISODate("2020-11-11"),submitted:true}
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('680d0fe8045ac2583bb5f8a9'),
+    '1': ObjectId('680d0fe8045ac2583bb5f8aa'),
+    '2': ObjectId('680d0fe8045ac2583bb5f8ab'),
+    '3': ObjectId('680d0fe8045ac2583bb5f8ac')
+  }
+}
+Zenclass> db.tasks.find();
+[  
+  {
+    _id: ObjectId('680d0fe8045ac2583bb5f8a9'),
+    task: 'function',
+    date: ISODate('2020-10-10T00:00:00.000Z'),
+    submitted: true
+  },
+  {
+    _id: ObjectId('680d0fe8045ac2583bb5f8aa'),
+    task: 'forloop',
+    date: ISODate('2020-10-18T00:00:00.000Z'),
+    submitted: false
+  },
+  {
+    _id: ObjectId('680d0fe8045ac2583bb5f8ab'),
+    task: 'oops',
+    date: ISODate('2020-10-20T00:00:00.000Z'),
+    submitted: false
+  },
+  {
+    _id: ObjectId('680d0fe8045ac2583bb5f8ac'),
+    task: 'blog about HTML',
+    date: ISODate('2020-11-11T00:00:00.000Z'),
+    submitted: true
+  }
+]
+
+--create a collection company_drives
+
+
+db.createCollection("company_drives");
+
+--Insert sample documents in to collection company_drives
+
+
+db.company_drives.insertMany([{ company_name: "HCL", date: ISODate("2020-09-25"), student_appeared: "Maheswari,ravi,aram" },
+ { company_name: "CTS", date: ISODate("2020-10-18"), student_appeared: "Priya,sundar,raju" }, 
+{ company_name: "TCS", date: ISODate("2020-10-20"), student_appeared: "Ragavi,bose,ram" },
+ { company_name: "ZOHO", date: ISODate("2020-11-12"), student_appeared: "Sahana,ramya,gowri" }] )
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('680d12b1045ac2583bb5f8ad'),
+    '1': ObjectId('680d12b1045ac2583bb5f8ae'),
+    '2': ObjectId('680d12b1045ac2583bb5f8af'),
+    '3': ObjectId('680d12b1045ac2583bb5f8b0')
+  }
+}
+Zenclass> db.company_drives.find();
+[  
+  {
+    _id: ObjectId('680d12b1045ac2583bb5f8ad'),
+    company_name: 'HCL',
+    date: ISODate('2020-09-25T00:00:00.000Z'),
+    student_appeared: 'Maheswari,ravi,aram'
+  },
+  {
+    _id: ObjectId('680d12b1045ac2583bb5f8ae'),
+    company_name: 'CTS',
+    date: ISODate('2020-10-18T00:00:00.000Z'),
+    student_appeared: 'Priya,sundar,raju'
+  },
+  {
+    _id: ObjectId('680d12b1045ac2583bb5f8af'),
+    company_name: 'TCS',
+    date: ISODate('2020-10-20T00:00:00.000Z'),
+    student_appeared: 'Ragavi,bose,ram'
+  },
+  {
+    _id: ObjectId('680d12b1045ac2583bb5f8b0'),
+    company_name: 'ZOHO',
+    date: ISODate('2020-11-12T00:00:00.000Z'),
+    student_appeared: 'Sahana,ramya,gowri'
+  }
+]
+
+--create a collection mentors
+
+db.createCollection("mentors");
+
+--Insert documents in to collection mentors
+
+
+db.mentors.insertMany([
+... {mentor_name:"Sathish",mentees_count:20},
+... {mentor_name:"Manikandan",mentees_count:35},
+... {mentor_name:"Fadil",mentees_count:25},
+... {mentor_name:"Kumar",menttes_count:40}
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('680d1471045ac2583bb5f8b1'),
+    '1': ObjectId('680d1471045ac2583bb5f8b2'),
+    '2': ObjectId('680d1471045ac2583bb5f8b3'),
+    '3': ObjectId('680d1471045ac2583bb5f8b4')
+  }
+}
+Zenclass> db.mentors.find();
+[  
+  {
+    _id: ObjectId('680d1471045ac2583bb5f8b1'),
+    mentor_name: 'Sathish',
+    mentees_count: 20
+  },
+  {
+    _id: ObjectId('680d1471045ac2583bb5f8b2'),
+    mentor_name: 'Manikandan',
+    mentees_count: 35
+  },
+  {
+    _id: ObjectId('680d1471045ac2583bb5f8b3'),
+    mentor_name: 'Fadil',
+    mentees_count: 25
+  },
+  {
+    _id: ObjectId('680d1471045ac2583bb5f8b4'),
+    mentor_name: 'Kumar',
+    menttes_count: 40
+  }
+]
+
+-----------------------------QURIES--------------------------------
+1.  Find all the topics and tasks which are thought in the month of October
+
+db.topics.find({month:"october"})
+[  
+  {
+    _id: ObjectId('680d0e3d045ac2583bb5f8a5'),
+    topic: 'javascript_Day1',
+    month: 'october',
+    date: ISODate('2020-10-10T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('680d0e3d045ac2583bb5f8a6'),
+    topic: 'javascript_Day2',
+    month: 'october',
+    date: ISODate('2020-10-18T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('680d0e3d045ac2583bb5f8a7'),
+    topic: 'javascript_Day3',
+    month: 'october',
+    date: ISODate('2020-10-20T00:00:00.000Z')
+  }
+]
+
+db.tasks.find({
+    date:{
+        $gt:new Date("2020-10-01"),
+        $lt:new Date("2020-10-31")}})
+[  
+  {
+    _id: ObjectId('680d0fe8045ac2583bb5f8a9'),
+    task: 'function',
+    date: ISODate('2020-10-10T00:00:00.000Z'),
+    submitted: true
+  },
+  {
+    _id: ObjectId('680d0fe8045ac2583bb5f8aa'),
+    task: 'forloop',
+    date: ISODate('2020-10-18T00:00:00.000Z'),
+    submitted: false
+  },
+  {
+    _id: ObjectId('680d0fe8045ac2583bb5f8ab'),
+    task: 'oops',
+    date: ISODate('2020-10-20T00:00:00.000Z'),
+    submitted: false
+  }
+]
+
+2.  Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+
+db.company_drives.find({
+    date:{
+        $gt:new Date("2020-10-15"),
+        $lt:new Date("2020-10-31")}})
+[  
+  {
+    _id: ObjectId('680d12b1045ac2583bb5f8ae'),
+    company_name: 'CTS',
+    date: ISODate('2020-10-18T00:00:00.000Z'),
+    student_appeared: 'Priya,sundar,raju'
+  },
+  {
+    _id: ObjectId('680d12b1045ac2583bb5f8af'),
+    company_name: 'TCS',
+    date: ISODate('2020-10-20T00:00:00.000Z'),
+    student_appeared: 'Ragavi,bose,ram'
+  }
+]
+
+3.  Find all the company drives and students who are appeared for the placement
+
+
+Zenclass> db.company_drives.find().forEach(function(value)
+{ print("Company Name : "+value.company_name); 
+print("Students Appeared : "+value.student_appeared)})
+Company Name : HCL
+Students Appeared : Maheswari,ravi,aram
+Company Name : CTS
+Students Appeared : Priya,sundar,raju
+Company Name : TCS
+Students Appeared : Ragavi,bose,ram
+Company Name : ZOHO
+Students Appeared : Sahana,ramya,gowri
+
+4.  Find the number of problems solved by the user in codekata
+
+db.codekatta.find().forEach(function (value) 
+{ print("Name : " + value.name); 
+print("Problems Solved : " + value.problems_solved); })
+Name : Maheswari     
+Problems Solved : 100
+Name : Priya
+Problems Solved : 150
+Name : Ragavi
+Problems Solved : 180
+Name : Sahana
+Problems Solved : 120
+
+5. Find all the mentors with who has the mentee's count more than 15
+
+db.mentors.find({mentees_count:{$gt:15}})
+[  
+  {
+    _id: ObjectId('680d1471045ac2583bb5f8b1'),
+    mentor_name: 'Sathish',
+    mentees_count: 20
+  },
+  {
+    _id: ObjectId('680d1471045ac2583bb5f8b2'),
+    mentor_name: 'Manikandan',
+    mentees_count: 35
+  },
+  {
+    _id: ObjectId('680d1471045ac2583bb5f8b3'),
+    mentor_name: 'Fadil',
+    mentees_count: 25
+  }
+]
+
+6. Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+
+db.task.find({date:{$gt:new Date("2020-10-15"),$lt:new Date("2020-10-31")}}).forEach(function(value){
+    print("Name : "+value.name);
+    print("Attendance :"+value.attendance);
+    print("Task : "+value.submitted)
+})
+
+
+Name : Maheswari     
+Attendance:  absent
+Task:  submitted
+Name : Ragavi
+Attendance:  absent
+Task:  submitted
