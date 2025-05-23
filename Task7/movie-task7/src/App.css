@@ -1,0 +1,20 @@
+
+/* App.css */
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .bg-animated {
+    background: linear-gradient(45deg, #ff6b6b, #f7b7a3, #5f27cd, #54a0ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+  }
+  
