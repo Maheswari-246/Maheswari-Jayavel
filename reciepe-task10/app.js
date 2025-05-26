@@ -1,31 +1,17 @@
 const express = require('express');
-const dotenv = require('dotenv');
-const connectDB = require('./config/db');
-const recipeRoutes = require('./routes/recipeRoutes');
+const recipeRouter = require('./routes/recipeRoutes');
+const errorRoute = require('./utils/errorRoute');
 
-// Initialize app
-const app = express();
 
-// Load environment variables
-dotenv.config();
+const app=express();
 
-// Connect Database
-connectDB();
-
-// Middleware
+// middleware to parse the request body
 app.use(express.json());
+app.use("/api/recipes",recipeRouter);
+app.get("/",(req,res)=>{
+    res.send("server is running..")
+})
 
-// Routes
-app.use('/api/recipes', recipeRoutes);
-
-// Root route
-app.get('/', (req, res) => {
-  res.send('Welcome to Recipes API!');
-});
-
-// Start server
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// middleware to handle 404 errors
+app.use(errorRoute);
+module.exports=app;
